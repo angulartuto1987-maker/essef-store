@@ -45,3 +45,11 @@ git add .
 git commit -m "Describe your changes here"
 git push
 ```
+
+## Tagging a release (v1) + rollback
+```bash
+git tag -a v1 -m "v1: first deployed release (2026-10-04)"
+git push origin v1
+# rollback later: git checkout v1 && npm run build && npx wrangler deploy
+# back to latest: git checkout main
+```

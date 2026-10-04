@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "essef-store-v5",
+  "name": "essef-store",
   "main": "./worker/index.ts",
   "compatibility_date": "2026-10-02",
-  "assets": { "not_found_handling": "single-page-application" },
+  "assets": {
+    "directory": "./dist/client",
+    "not_found_handling": "single-page-application"
+  },
   "kv_namespaces": [
     { "binding": "ESSEF_KV", "id": "7d2c2b6989464b79b8a20b32d068ff11" }
   ]

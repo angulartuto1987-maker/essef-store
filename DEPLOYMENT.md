@@ -138,3 +138,19 @@ npm run deploy
 npx wrangler kv namespace create ESSEF_KV
 npx wrangler kv key list --namespace-id YOUR_ID
 ```
+
+## 15. Releases & rollback (v1 = deployed version)
+Tag the commit that matches what is live, so any future state can roll back:
+```bash
+git tag -a v1 -m "v1: first deployed release (2026-10-04)"
+git push origin v1
+```
+Rollback the site to v1 later:
+```bash
+git checkout v1
+npm run build
+npx wrangler deploy
+# then return to latest: git checkout main
+```
+Verify a tag matches the live site by comparing the deployed Worker
+Version ID (printed by `wrangler deploy`) with the release notes.

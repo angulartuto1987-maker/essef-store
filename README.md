@@ -19,6 +19,13 @@ This is a lightweight KV architecture. KV is excellent for a small prototype, bu
 
 See DEPLOYMENT.md for exact Cloudflare steps.
 
+## Releases
+- **v1** (2026-10-04) — first deployed release: asset pipeline fix
+  (`assets.directory`), color photos, product detail popup, responsive
+  hardening, 64px mobile logo. Live at
+  `https://essef-store.angulartuto1987.workers.dev/`.
+- Rollback: see DEPLOYMENT.md §15 (`git checkout v1` → build → deploy).
+
 ## Project structure
 - `src/main.tsx` — React UI and catalog
 - `src/styles.css` — black/white responsive theme
